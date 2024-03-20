@@ -1,15 +1,16 @@
+import funcionarios.Employed;
+
 import java.text.ParseException;
 
 public class main {
+    public static void main(String[] args) {
+    Employed cadu = new Employed("Cadu","junior") ;
 
-    public static void main(String[] args) throws ParseException {
-        System.out.println("1- Ingressar na faculdade ou  2-Renovar Matricula");
-        int number = Scan.sc.nextInt();
 
-        switch (number){
-            case 1: IngressarFaculdade.adicionarNaEscola();
-            case 2:
-        }
+    CadastrarEmployed cadastro = new CadastrarEmployed();
+
+    cadastro.definirSalario(cadu);
+    System.out.println("Salario é igual: "+cadu.getSalario());
 
     }
 }
